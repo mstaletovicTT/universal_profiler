@@ -1,0 +1,73 @@
+UNIVERSAL TTNN OPERATION PROFILING REPORT
+==================================================
+Generated: 2025-12-24 15:31:00
+
+PARAMETER ANALYSIS
+--------------------
+Total varying parameters detected: 2
+
+Parameter: batch_size, input_channels, output_channels, input_height, input_width, groups, kernel_height, kernel_width, stride_h, stride_w, padding, dilation_h, dilation_w
+  Display Name: input_channels
+  Type: Numeric
+  Values Count: 11
+  Changing Dimension: 1
+
+Parameter: math_fidelity
+  Display Name: math_fidelity
+  Type: Categorical
+  Values Count: 3
+
+STATIC PARAMETERS
+--------------------
+Total static parameters: 10
+
+Parameter: device_params
+  Value: {'l1_small_size': 16384}
+
+Parameter: enable_activation_reuse
+  Value: False
+
+Parameter: shard_layout
+  Value: HS
+
+Parameter: output_dtype
+  Value: DataType.BFLOAT16
+
+Parameter: input_dtype
+  Value: DataType.BFLOAT16
+
+Parameter: weights_dtype
+  Value: DataType.BFLOAT16
+
+Parameter: has_bias
+  Value: True
+
+Parameter: fp32_accum
+  Value: False
+
+Parameter: packer_l1_acc
+  Value: False
+
+Parameter: output_layout
+  Value: Layout.TILE
+
+PERFORMANCE SUMMARY
+--------------------
+Operation: HaloDeviceOperation
+  Total measurements: 33
+  Min duration: 1778 ns
+  Max duration: 16122 ns
+  Avg duration: 7485 ns
+
+Operation: MoveDeviceOperation
+  Total measurements: 33
+  Min duration: 674 ns
+  Max duration: 2419 ns
+  Avg duration: 1524 ns
+
+Operation: Conv2dDeviceOperation
+  Total measurements: 33
+  Min duration: 8225 ns
+  Max duration: 76106 ns
+  Avg duration: 33149 ns
+

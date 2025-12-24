@@ -1,0 +1,36 @@
+UNIVERSAL TTNN PROFILER - FILE STRUCTURE
+=========================================
+
+CORE FILES:
+-----------
+universal_profiler.py    - Main CLI entry point and workflow orchestration
+parameter_detector.py    - AST-based parameter extraction from pytest files
+test_executor.py         - Tracy profiling execution and output management
+data_extractor.py        - Performance data parsing and alignment
+visualizer.py           - Plot generation and report creation
+
+EXAMPLE FILES:
+--------------
+ConvTestExample.py      - Example test file (convolution input channels sweep)
+example_output/         - Pre-generated example output directory containing:
+  ├── Conv2dDeviceOperation_performance.svg
+  ├── HaloDeviceOperation_performance.svg
+  ├── MoveDeviceOperation_performance.svg
+  ├── profiling_summary.txt
+  └── original_ops_perf_results.csv
+
+DOCUMENTATION:
+--------------
+README.md              - Comprehensive usage guide and documentation
+FILES_SUMMARY.txt      - This file
+
+USAGE:
+------
+python universal_profiler.py ConvTestExample.py
+
+REQUIREMENTS:
+-------------
+- Standard TT Metal Python environment
+- TTNN library
+- Tracy profiling module
+- matplotlib and numpy (usually included in TT Metal env)
